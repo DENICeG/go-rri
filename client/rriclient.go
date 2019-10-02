@@ -51,7 +51,7 @@ func (client *RriClient) Close() error {
 func (client *RriClient) Login() error {
 	loginMsg := &messagetype.LoginMessage{
 		Action:   "LOGIN",
-		Version:  "2.0",
+		Version:  "3.0",
 		Username: client.Username,
 		Password: client.Password,
 	}
@@ -66,7 +66,7 @@ func (client *RriClient) Login() error {
 func (client *RriClient) Logout() error {
 	logoutMsg := &messagetype.LogoutMessage{
 		Action:  "LOGOUT",
-		Version: "2.0",
+		Version: "3.0",
 	}
 	err := client.send(logoutMsg)
 	if err != nil {
