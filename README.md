@@ -30,7 +30,7 @@ func main() {
 
         order := make(map[string]interface{})
         order["ACTION"] = "CHECK"
-        order["VERSION"] = "2.0"
+        order["VERSION"] = "3.0"
         order["DOMAIN"] = "mydomain.de"
 
         client.SendOrder(order)
